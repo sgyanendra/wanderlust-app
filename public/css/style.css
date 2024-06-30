@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(199, 221, 73);
+}
+.icon{
+    font-size: 3rem;
+    margin-left: 10px;
+    color: red;
+}
+
+
+.f-info{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background-color: rgb(199, 202, 202);
+}
+.social{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.social i{
+    padding: 5px;
+}
+.company{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.privacy{
+    margin-top: -10px;
+    padding-left: 10px;
+}
+.privacy a{
+  text-decoration: none;
+}
+.privacy a:hover{
+    text-decoration: underline;
+}
+
+/* Listing */
+/* CARd */
+/* show-page */
+.show-image{
+    height: 50vh;
+}
+.show-card{
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+.card-img-top{
+    border-radius: 5px;
+    width: 100%;
+    object-fit: cover;
+}
+.listing-link{
+    text-decoration: none;
+}
+.button{
+    display: flex;
+    margin-top: 10px;
+}
+.edit{
+    margin-left: 100px;
+    height:40px;
+}
+ 
+.lg{
+    margin-bottom: 8.1rem;
+}
+.sign{
+    margin-bottom: 6.3rem;
+}

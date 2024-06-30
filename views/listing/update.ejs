@@ -1,0 +1,50 @@
+<%  layout("layouts/boilerplate") -%>
+<body>
+    
+    <div class="row">
+     <div class="col-8 offset-2">
+        <br>
+        <h1>Update the details</h1>    
+    <form  method="post" action="/edid/<%= data._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+    <div class="mb-2">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" name="list[title]" class="form-control" value="<%= data.title %>" required>
+        <div class="invalid-feedback">Title name should be valid</div>
+    </div>
+     <div class="mb-2">
+        <label for="description" class="form-label">Description:</label>
+        <textarea name="list[description]" value="<%= data.description %>" class="form-control" required></textarea>
+        <div class="invalid-feedback">Description should be valid</div> 
+     </div>
+     <div class="mb-2">
+       Original image: <br>
+       <img src="<%= originalUrl %>" alt="" height="100px" width="140px"></img>
+     </div>
+     <div class="mb-2">
+        <label for="image" class="form-label">Image:</label>
+        <input type="file" name="list[image]" class="form-control" required>
+        <div class="invalid-feedback">image name should be valid</div> 
+     </div>
+     <div class="row">
+     <div class="mb-2 col-md-4">
+        <label for="price" class="form-label">Price:</label>
+        <input type="text" name="list[price]" class="form-control" value="<%= data.price %>" required>
+        <div class="invalid-feedback">Price should be valid</div>
+      </div>
+     <div class="mb-2 col-md-8">
+        <label for="country" class="form-label">Country:</label>
+        <input type="text" name="list[country]" class="form-control" value="<%= data.country %>" required>
+        <div class="invalid-feedback">Country name should be valid</div>
+      </div>
+    </div>
+     <div class="mb-2">
+         <label for="location" class="form-label">Location:</label>
+        <input type="text" name="list[location]" class="form-control" value="<%= data.location %>" required>
+     </div>
+    <button class="btn btn-danger">Add</button>
+    <br><br>
+</form>
+</div>
+</div>
+ <script src="/js/script.js"></script>
+</body>

@@ -1,0 +1,47 @@
+<%  layout("layouts/boilerplate") -%>
+<body>
+   <div class="container">
+    <div class="row show mt-50 mb-50">
+       <div class="col-8 offset-2">
+        <br>
+        <h1><%= data.title%></h1>
+       </div>
+    </div>
+      <div class="row">
+        <div class="col-6 offset-2 mb-50">
+          <div class="card s-card mb-50"style="height:100px;">
+            <img src="<%= data.image.url %>" class="card-img-top" alt="...">
+            <div class="card-body s-body">
+              <p class="card-text"><b></b><br>
+              <%= data.location %> <br>
+              <%= data.country %> <br>
+              <b>&#8377; <%= data.price.toLocaleString("en-IN") %></b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8 offset-2 mt-50">
+          <a href="/edit/<%= data._id %>">Edit</a><br><br>
+          <form action="/delete/<%= data._id%>?_method=DELETE" method="post">
+              <button>Delete</button>
+          </form>    
+        </div>
+      </div>
+      <div class="row">    
+        <div class="col-8 offset-2">
+        <div class="mt-10">
+          <label for="rating" class="form-label">Rating</label>
+          <input type="range" min="1" max="5" class="form-control">
+        </div>
+        <div>
+          <label for="comment" class="form-label">Comments</label>
+          <textarea name="comment" id="" class="form-control" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+  
+
+</body>
