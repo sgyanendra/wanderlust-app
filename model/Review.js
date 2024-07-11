@@ -1,4 +1,3 @@
-const { defaults } = require("figlet");
 const mongoose=require("mongoose");
 const {Schema}=mongoose;
 
